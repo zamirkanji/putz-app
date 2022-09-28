@@ -2,8 +2,36 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const Home: NextPage = () => {
+
+
+  // Import the functions you need from the SDKs you need
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDg_mdDs6Mnqpg2flY53eegSxsNFB971WE",
+    authDomain: "putz-app.firebaseapp.com",
+    projectId: "putz-app",
+    storageBucket: "putz-app.appspot.com",
+    messagingSenderId: "400459141438",
+    appId: "1:400459141438:web:54ef6a7b38af5c1cbd1c6f",
+    measurementId: "G-YLSHVSY43J"
+  };
+
+  // Initialize Firebase
+  // const app = initializeApp(firebaseConfig);
+  // const analytics = getAnalytics(app);
+
+
+
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +42,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Putz!</a>
         </h1>
 
         <p className={styles.description}>
