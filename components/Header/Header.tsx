@@ -1,13 +1,11 @@
-// import { HeaderContainer } from "../styled/Container.styled";
-// import { Switch } from '@mui/material';
 import React from "react";
 import { ThemeProvider } from "styled-components";
-// import { darkTheme, headerTheme } from "../styled/theme";
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { HeaderContainer } from "../../styles/components/Header/Header.styled";
+import { IconSun, IconMoonStars } from '@tabler/icons';
 import Link from "next/link";
-import { useState } from "react";
-import { type } from "os";
-import { darkTheme } from "../../styles/components/Theme/theme";
+import { darkTheme, lightTheme } from "../../styles/components/Theme/theme";
+import { Switch } from "@mui/material";
 
 const styles: {[key: string]: React.CSSProperties} = {
   container: {
@@ -32,26 +30,30 @@ const styles: {[key: string]: React.CSSProperties} = {
 }
 
 
+
 type HeaderProps = {
     onclick: any
 }
 
 function Header({onclick}: HeaderProps) {
-
-  return (
-    <ThemeProvider theme={darkTheme}>
-        <header>
-            <h1><Link href='/home'>Putz</Link></h1>
-            <p>Markets, stocks, options, watchlists...</p>
-        </header>
-        <div style={styles.iconContainer}>
-            {/* <AccountCircleIcon style={styles.accountIcon} className='accountIcon' onClick={handleAccountClick} />
-            <Switch 
-                    onChange={handleChange}
-                    inputProps={{ 'aria-label': 'controlled' }}/> */}
-        </div>
-    </ThemeProvider>
-  )
+    const handleChange = () => {
+        console.log('test');
+    }
+    
+    return (
+        <HeaderContainer>
+            <ThemeProvider theme={lightTheme}>
+                <header>
+                    <h1><Link href='/home'>Putz</Link></h1>
+                    <p>Markets, stocks, options, watchlists...</p>
+                </header>
+                <div style={styles.iconContainer}>
+                    <AccountCircleIcon style={styles.accountIcon}/>
+                    <IconMoonStars onChange={handleChange} />
+                </div>
+            </ThemeProvider>
+        </HeaderContainer>
+    )
 }
 
 export default Header

@@ -1,4 +1,3 @@
-import { StringLike } from "@firebase/util";
 import { DefaultTheme, createGlobalStyle } from "styled-components";
 
 declare module 'styled-components' {
@@ -16,4 +15,9 @@ export const lightTheme: DefaultTheme = {
 export const darkTheme: DefaultTheme = {
     primaryColor: 'black',
     secondaryColor: '#11151c'
+}
+
+export const iconTheme: DefaultTheme = {
+    primaryColor: 'white',
+    secondaryColor: 'white'
 }

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from '../styles/components/Theme/theme';
 import Header from '../components/Header/Header';
+import Navbar from '../components/Navbar/Navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState('Dark');
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme == 'Dark' ? darkTheme : lightTheme}>
       <Header onclick={toggleTheme} />
       <Component {...pageProps} />
+      <Navbar />
     </ThemeProvider>
   )
 }
