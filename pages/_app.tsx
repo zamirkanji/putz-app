@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { darkTheme, lightTheme } from '../styles/components/Theme/theme';
+import { darkTheme, GlobalStyles, lightTheme } from '../styles/components/Theme/theme';
 import Header from '../components/Header/Header';
 import Navbar from '../components/Navbar/Navbar';
 
@@ -15,7 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={theme == 'Dark' ? darkTheme : lightTheme}>
-      <Header onclick={toggleTheme} />
+      <GlobalStyles />
+      <Header toggleTheme={toggleTheme} />
       <Component {...pageProps} />
       <Navbar />
     </ThemeProvider>

@@ -32,12 +32,13 @@ const styles: {[key: string]: React.CSSProperties} = {
 
 
 type HeaderProps = {
-    onclick: any
+    toggleTheme: any
 }
 
-function Header({onclick}: HeaderProps) {
+function Header({toggleTheme}: HeaderProps) {
     const handleChange = () => {
         console.log('test');
+        toggleTheme();
     }
     
     return (
@@ -49,7 +50,7 @@ function Header({onclick}: HeaderProps) {
                 </header>
                 <div style={styles.iconContainer}>
                     <AccountCircleIcon style={styles.accountIcon}/>
-                    <IconMoonStars onChange={handleChange} />
+                    <IconMoonStars onClick={handleChange} />
                 </div>
             </ThemeProvider>
         </HeaderContainer>
