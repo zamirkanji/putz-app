@@ -6,6 +6,7 @@ import { getAnalytics } from "firebase/analytics";
 import Link from 'next/link';
 import { MainContainer } from '../styles/components/Main/Main.styled';
 import { Container } from '../styles/components/Main/Container.styled';
+import Market from '../components/Market/Market';
 
 const Home: NextPage = () => {
 
@@ -37,24 +38,13 @@ const Home: NextPage = () => {
   return (
     // <div className={styles.container}>
     <Container>
-
       <Head>
         <title>Putz</title>
         <meta name="description" content="Putz - Market info and watchlist." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {/* <main className={styles.main}> */}
       <MainContainer>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Putz!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Login or {' '}
-          <code className={styles.code}>Sign Up</code>
-        </p>
-
+        <Market />
         <div className={styles.grid}>
           <Link href='/market'>
             <a className={styles.card}>
@@ -62,33 +52,34 @@ const Home: NextPage = () => {
               <p>See how the Market is performing and check out the hottest stocks.</p>
             </a>
           </Link>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Options &rarr;</h2>
-            <p>Your very own options chain and dashboard!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-            >
-            <h2>Learn More &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            >
-            <h2>Account &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href='/options'>
+            <a className={styles.card}>
+              <h2>Options &rarr;</h2>
+              <p>Your very own options chain and dashboard!</p>
+            </a>
+          </Link>
+          <Link href='/about'>
+            <a className={styles.card}>
+              <h2>Learn More &rarr;</h2>
+              <p>Discover and deploy boilerplate example Next.js projects.</p>
+            </a>
+          </Link>
+          <Link href='/account'>
+            <a
+              className={styles.card}
+              >
+              <h2>Account &rarr;</h2>
+              <p>
+                Instantly deploy your Next.js site to a public URL with Vercel.
+              </p>
+            </a>
+          </Link>
         </div>
+        <p className={styles.description}>
+          Login or {' '}
+          <code className={styles.code}>Sign Up</code>
+        </p>
       </MainContainer>
-      {/* </main> */}
-    {/* </div> */}
     </Container>
   )
 }

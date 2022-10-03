@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
     flex: .10;
     display: flex;
     justify-content: space-between;
@@ -8,6 +8,7 @@ export const HeaderContainer = styled.div`
     background-color: #324a5f;
     background: ${({theme}) => theme.primaryColor};
     color: ${({theme}) => theme.secondaryColor};
+    // border: 1px solid #eaeaea;
     padding: 15px;
     margin: 0;
     h1 {

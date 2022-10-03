@@ -1,3 +1,10 @@
 .icon {
     border: 1px solid blue;
 }
+
+/* .icon:hover,
+.icon:focus,
+.icon:active {
+    border-color: #34aeff;
+    color: #34aeff;
+} */

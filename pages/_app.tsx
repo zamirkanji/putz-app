@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const toggleTheme = () => {
     theme == 'Dark' ? setTheme('Light') : setTheme('Dark');
+    return theme;
   }
 
   return (
