@@ -8,10 +8,6 @@ export const HeaderContainer = styled.header`
     background-color: #324a5f;
     background: ${({theme}) => theme.primaryColor};
     color: ${({theme}) => theme.secondaryColor};
-    // border: 1px solid #eaeaea;
     padding: 15px;
     margin: 0;
-    h1 {
-        color: #2473a8;;
-    }
 `

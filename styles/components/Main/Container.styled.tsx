@@ -7,4 +7,5 @@ export const Container = styled.div`
     // display: flex;
     // flex-direction: column;
     // gap: 25px;
+    overflow: auto;
 `

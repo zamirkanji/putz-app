@@ -6,6 +6,6 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 25px;
-    overflow: auto;
+    // overflow: auto;
     // border: 1px solid #eaeaea;
 `

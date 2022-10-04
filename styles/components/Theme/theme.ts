@@ -45,5 +45,6 @@ export const GlobalStyles = createGlobalStyle`
     h1, h2, h3 {
         font-weight: 600;
         letter-spacing: 1px;
+        color: #34aeff;
     }
 `

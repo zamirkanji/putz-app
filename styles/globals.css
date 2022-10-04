@@ -1,11 +1,3 @@
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  box-sizing: border-box;
-} */
 /* Box sizing rules */
 *,
 *::before,
@@ -81,17 +73,15 @@ select {
   }
 }
 
-/* html,
+html,
 body, body > div:first-child,
 div#__next {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: #11151c;
+  /* background: #11151c; */
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-} */
+}
 

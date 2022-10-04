@@ -24,7 +24,8 @@ const styles: {[key: string]: React.CSSProperties} = {
   iconContainer: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    gap: '10px'
   },
   accountIcon: {
     cursor: 'pointer'

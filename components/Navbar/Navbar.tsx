@@ -14,36 +14,38 @@ const Navbar = () => {
     return (
         <NavbarContainer>
             <ThemeProvider theme={lightTheme}>
-                <Link href="/account" className={styles.icon}>
-                    <ThemeProvider theme={iconTheme}>
-                        <AccountCircleIcon>
-                        </AccountCircleIcon>
-                    </ThemeProvider>
-                </Link>
-                <Link href="/market" className={styles.icon}>
-                    <ThemeProvider theme={iconTheme}>
-                        <TrendingDownIcon>
+                <ThemeProvider theme={iconTheme}>
+                    <Link href="/account">
+                            <AccountCircleIcon className={styles.icon}>
+                            </AccountCircleIcon>
+                    </Link>
+                </ThemeProvider>
+
+                <ThemeProvider theme={iconTheme}>
+                    <Link href="/market">
+                        <TrendingDownIcon className={styles.icon}>
                         </TrendingDownIcon>
-                    </ThemeProvider>
-                </Link>
-                <Link href="/home" className={styles.icon}>
-                    <ThemeProvider theme={iconTheme}>
-                        <HomeIcon>
+                    </Link>
+                </ThemeProvider>
+
+                <ThemeProvider theme={iconTheme}>
+                    <Link href="/home">
+                        <HomeIcon className={styles.icon}>
                         </HomeIcon>
-                    </ThemeProvider>
-                </Link>
-                <Link href="/watchlist" className={styles.icon}>
-                    <ThemeProvider theme={iconTheme}>
-                        <ListIcon>
+                    </Link>
+                </ThemeProvider>
+                <ThemeProvider theme={iconTheme}>
+                    <Link href="/watchlist">
+                        <ListIcon className={styles.icon}>
                         </ListIcon>
-                    </ThemeProvider>
-                </Link>
-                <Link href="/search" className={styles.icon}>
-                    <ThemeProvider theme={iconTheme}>
-                        <SearchIcon>
+                    </Link>
+                </ThemeProvider>
+                <ThemeProvider theme={iconTheme}>
+                    <Link href="/search">
+                        <SearchIcon className={styles.icon}>
                         </SearchIcon>
-                    </ThemeProvider>
-                </Link>
+                    </Link>
+                </ThemeProvider>
             </ThemeProvider>
         </NavbarContainer>
     )

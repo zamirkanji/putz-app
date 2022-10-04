@@ -7,10 +7,9 @@ import Link from 'next/link';
 import { MainContainer } from '../styles/components/Main/Main.styled';
 import { Container } from '../styles/components/Main/Container.styled';
 import Market from '../components/Market/Market';
+import HomeComponent from '../components/Home/HomeComponent';
 
 const Home: NextPage = () => {
-
-
   // Import the functions you need from the SDKs you need
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -31,12 +30,7 @@ const Home: NextPage = () => {
   // const app = initializeApp(firebaseConfig);
   // const analytics = getAnalytics(app);
 
-
-
-
-
   return (
-    // <div className={styles.container}>
     <Container>
       <Head>
         <title>Putz</title>
@@ -45,40 +39,7 @@ const Home: NextPage = () => {
       </Head>
       <MainContainer>
         <Market />
-        <div className={styles.grid}>
-          <Link href='/market'>
-            <a className={styles.card}>
-              <h2>Market &rarr;</h2>
-              <p>See how the Market is performing and check out the hottest stocks.</p>
-            </a>
-          </Link>
-          <Link href='/options'>
-            <a className={styles.card}>
-              <h2>Options &rarr;</h2>
-              <p>Your very own options chain and dashboard!</p>
-            </a>
-          </Link>
-          <Link href='/about'>
-            <a className={styles.card}>
-              <h2>Learn More &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-          </Link>
-          <Link href='/account'>
-            <a
-              className={styles.card}
-              >
-              <h2>Account &rarr;</h2>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
-          </Link>
-        </div>
-        <p className={styles.description}>
-          Login or {' '}
-          <code className={styles.code}>Sign Up</code>
-        </p>
+        <HomeComponent />
       </MainContainer>
     </Container>
   )
