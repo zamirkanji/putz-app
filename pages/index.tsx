@@ -4,7 +4,8 @@ import styles from '../styles/Home.module.css'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import Link from 'next/link';
-import { MainContainer } from '../styles/components/Main/Main.styled';
+import { MainContainer } from '../styles/components/Main/Container.styled';
+import { Main } from '../styles/components/Main/Main.styled';
 import { Container } from '../styles/components/Main/Container.styled';
 import Market from '../components/Market/Market';
 import HomeComponent from '../components/Home/HomeComponent';
@@ -31,17 +32,18 @@ const Home: NextPage = () => {
   // const analytics = getAnalytics(app);
 
   return (
-    <Container>
+    <MainContainer>
       <Head>
         <title>Putz</title>
         <meta name="description" content="Putz - Market info and watchlist." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainContainer>
+      <Main>
         <Market />
         <HomeComponent />
-      </MainContainer>
-    </Container>
+      </Main>
+      
+    </MainContainer>
   )
 }
 

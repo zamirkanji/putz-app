@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div`
-    // padding: 4rem 0;
+
+export const Main = styled.main`
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    // overflow: auto;
-    // border: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+    background: ${({theme}) => theme.primaryColor};
+    color: ${({theme}) => theme.secondaryColor};
+    // gap: 15px;
 `

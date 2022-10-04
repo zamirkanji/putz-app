@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.main`
     background: ${({theme}) => theme.primaryColor};
     color: ${({theme}) => theme.secondaryColor};
     flex: .8;
@@ -8,4 +8,11 @@ export const Container = styled.div`
     // flex-direction: column;
     // gap: 25px;
     overflow: auto;
+`
+
+export const MainContainer = styled.div`
+    flex: .8;
+    // height: 100%;
+    // width: 100%;
+    display: flex;
 `

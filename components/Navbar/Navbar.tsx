@@ -29,7 +29,7 @@ const Navbar = () => {
                 </ThemeProvider>
 
                 <ThemeProvider theme={iconTheme}>
-                    <Link href="/home">
+                    <Link href="/">
                         <HomeIcon className={styles.icon}>
                         </HomeIcon>
                     </Link>
