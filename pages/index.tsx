@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import Link from 'next/link';
-import { MainContainer } from '../styles/components/Main/Container.styled';
+import { MainContainer, Container } from '../styles/components/Main/Container.styled';
 import { Main } from '../styles/components/Main/Main.styled';
-import { Container } from '../styles/components/Main/Container.styled';
 import Market from '../components/Market/Market';
 import HomeComponent from '../components/Home/HomeComponent';
+import { getAuth } from 'firebase/auth';
 
 const Home: NextPage = () => {
   // Import the functions you need from the SDKs you need
@@ -27,6 +26,10 @@ const Home: NextPage = () => {
     measurementId: "G-YLSHVSY43J"
   };
 
+  const app = initializeApp(firebaseConfig);
+  // const analytics = getAnalytics(app);
+  // const auth = getAuth(app);
+
   // Initialize Firebase
   // const app = initializeApp(firebaseConfig);
   // const analytics = getAnalytics(app);
@@ -38,11 +41,10 @@ const Home: NextPage = () => {
         <meta name="description" content="Putz - Market info and watchlist." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main>
+      <Container>
         <Market />
         <HomeComponent />
-      </Main>
-      
+      </Container> 
     </MainContainer>
   )
 }

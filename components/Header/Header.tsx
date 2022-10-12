@@ -52,7 +52,7 @@ function Header({toggleTheme}: HeaderProps) {
         <HeaderContainer>
             <ThemeProvider theme={lightTheme}>
                 <header>
-                    <Link href='/home'><h1>Putz</h1></Link>
+                    <Link href='/'><h1>Putz</h1></Link>
                     <p>Markets, stocks, options, watchlists...</p>
                 </header>
                 <div style={styles.iconContainer}>
